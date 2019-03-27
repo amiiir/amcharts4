@@ -1,10 +1,9 @@
 {
-  "private": true,
-  "name": "@amcharts/amcharts4",
+  "name": "@amiiir/amcharts4",
   "version": "4.3.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amcharts/amcharts4.git"
+    "url": "https://github.com/amiiir/amcharts4.git"
   },
   "scripts": {
     "clean": "rimraf ./dist",

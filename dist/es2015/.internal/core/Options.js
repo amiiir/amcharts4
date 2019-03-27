@@ -1,6 +1,6 @@
 export var options = {
     verbose: true,
-    commercialLicense: false,
+    commercialLicense: true,
     classNamePrefix: "amcharts-",
     autoSetClassName: false,
     minPolylineStep: 0.5

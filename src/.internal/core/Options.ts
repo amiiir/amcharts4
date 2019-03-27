@@ -78,7 +78,7 @@ export interface Options {
 
 export const options: Options = {
 	verbose: true,
-	commercialLicense: false,
+	commercialLicense: true,
 	classNamePrefix: "amcharts-",
 	autoSetClassName: false,
 	minPolylineStep: 0.5

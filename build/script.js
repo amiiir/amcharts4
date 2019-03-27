@@ -20,17 +20,17 @@ function makeSubPackage1(entries, name, fileDir, inputDir, outputDir, packageNam
 
 				if (filename === "index.js") {
 					$fs.writeFileSync($path.join(name, filename),
-`import * as m from "../${fileDir}/${path.name}";
+						`import * as m from "../${fileDir}/${path.name}";
 window.am4${mangledName} = m;`);
 
 				} else if (useDefault) {
 					$fs.writeFileSync($path.join(name, filename),
-`import m from "../${fileDir}/${path.name}";
+						`import m from "../${fileDir}/${path.name}";
 window.am4${mangledName}_${path.name} = m;`);
 
 				} else {
 					$fs.writeFileSync($path.join(name, filename),
-`import * as m from "../${fileDir}/${path.name}";
+						`import * as m from "../${fileDir}/${path.name}";
 window.am4${mangledName}_${path.name} = m;`);
 				}
 
@@ -54,7 +54,7 @@ function makeSrc(entries, path) {
 
 			if (path.name === "core") {
 				$fs.writeFileSync(filename,
-`import * as m from "../es2015/core";
+					`import * as m from "../es2015/core";
 window.am4core = m;
 
 // TODO move all of this code into a different module and then import it
@@ -80,7 +80,7 @@ __webpack_public_path__ = dirpath(getCurrentScript().src);
 
 			} else {
 				$fs.writeFileSync(filename,
-`import * as m from "../es2015/${path.name}";
+					`import * as m from "../es2015/${path.name}";
 window.am4${path.name} = m;`);
 
 				entries[path.name] = "./" + filename;
@@ -102,7 +102,7 @@ function runWebpack(entries) {
 	);
 
 	$util.withLinkSource("../es2015", () => {
-		$util.withLinkTargets(["@amcharts/amcharts4"], () => {
+		$util.withLinkTargets(["@amiiir/amcharts4"], () => {
 			$util.run("webpack", ["--config", "webpack.script.js"]);
 		});
 
